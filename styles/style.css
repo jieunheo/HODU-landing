@@ -56,13 +56,14 @@ button {
 [class*="title"] {
   font-family: "SpoqaHanSansNeo-Bold", sans-serif;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: max(2.4rem, 5vw);
   line-height: 1.2;
 }
 
 [class*="desc"] {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: max(1.4rem, 2.5vw);
+  line-height: 1.2;
 }
 
 [class$="__btn"] {
@@ -183,7 +184,13 @@ button {
   margin-top: -6rem;
 }
 
+.intro__title--mobile {
+  display: block;
+}
+
 .intro__text {
+  width: max(28rem, 50vw);
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,10 +200,12 @@ button {
 /* main - inform */
 .inform {
   padding: 4rem 3.2rem;
-}
 
-.inform__title {
-  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
 }
 
 .inform__desc {
@@ -207,6 +216,10 @@ button {
 .feature {
   margin-top: 6rem;
   padding: 0 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   text-align: center;
 }
@@ -225,6 +238,8 @@ button {
 }
 
 .feature__imgs {
+  align-self: self-start;
+
   margin-top: 4rem;
 
   display: flex;
@@ -234,7 +249,6 @@ button {
 
 .feature__item {
   width: 26rem;
-  height: 26rem;
 }
 
 .feature__post {
@@ -266,6 +280,12 @@ button {
   color: var(--text-white);
 
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem;
 }
 
 .subscribe__desc {
@@ -273,8 +293,6 @@ button {
 }
 
 .subscribe__form {
-  margin-top: 3rem;
-
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -408,10 +426,10 @@ button {
 .modal {
   padding: 3rem 5rem;
   background: var(--main-bg-color) url(../images/modal-bg-img.png) no-repeat top
-    center / cover;
+    center / contain;
   border-radius: 3rem;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  width: calc(100% - 6rem);
+  width: max(30rem, calc(100% - 27rem));
 
   text-align: center;
 

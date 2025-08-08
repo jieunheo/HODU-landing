@@ -1,10 +1,10 @@
 /* 공통 */
 [class*="title"] {
-  font-size: 4.8rem;
+  font-size: min(4.8rem, 5vw);
 }
 
 [class*="desc"] {
-  font-size: 1.6rem;
+  font-size: min(1.6rem, 1.8vw);
 }
 
 [class$="__btn"] {
@@ -25,7 +25,7 @@
 
 /* header - logo */
 .header__logo img {
-  width: 13rem;
+  width: min(13rem, 13vw);
   aspect-ratio: 130/40;
 }
 
@@ -71,7 +71,7 @@
 
   flex-direction: row;
   justify-content: center;
-  gap: 12.8rem;
+  gap: min(12.8rem, 10vw);
 }
 
 .intro::after {
@@ -80,6 +80,10 @@
 
   background-position-y: 10rem;
   margin-top: -10rem;
+}
+
+.intro__title--mobile {
+  display: inline;
 }
 
 .intro__text {
@@ -94,21 +98,22 @@
 
 /* main - inform */
 .inform {
+  width: 100vw;
   padding: 8rem 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 11rem;
+  flex-direction: row;
+  gap: min(11rem, 4vw);
 }
 
 .inform__img {
-  width: 66rem;
+  width: min(66rem, 46vw);
   aspect-ratio: 660/360;
 }
 
 .inform__text {
-  width: 51rem;
+  width: min(51rem, 40vw);
+
+  flex-shrink: 0;
 }
 
 .inform__desc {
@@ -118,10 +123,6 @@
 /* main - feature */
 .feature {
   margin-top: 12rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .feature__desc {
@@ -132,21 +133,20 @@
   margin-top: 8.8rem;
 
   justify-content: center;
-  gap: 7.2rem;
+  gap: min(7.2rem, 2vw);
 }
 
 .feature__item {
-  width: 37.8rem;
-  height: 37.8rem;
+  width: min(37.8rem, 30vw);
 }
 
 .feature__post {
   margin-top: 9rem;
-  width: 93.8rem;
+  width: min(93.8rem, 90vw);
 
   flex-direction: row;
   align-items: center;
-  gap: 5.2rem;
+  gap: min(5.2rem, 4vw);
 }
 
 .more__btn {
@@ -158,27 +158,26 @@
 /* main - subscribe */
 .subscribe {
   margin: 9rem auto 0;
-  padding: 5rem 5.8rem;
+  padding: min(5rem, 3vw) min(5.8rem, 3.2vw);
   border-radius: 3rem;
-  width: max-content;
+  width: fit-content;
 
-  display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  gap: 14.3rem;
+  gap: min(14.3rem, 1vw);
 }
 
 .subscribe__cont {
-  width: 49.1rem;
+  width: min(49.1rem, 35vw);
 }
 
 .subscribe__title {
-  font-size: 3.6rem;
+  font-size: min(3.6rem, 3.7vw);
 }
 
 .subscribe__desc {
   margin-top: 1.8rem;
-  font-size: 1.4rem;
+  font-size: min(1.4rem, 1.7vw);
 }
 
 .subscribe__form {
@@ -186,6 +185,7 @@
   background-color: var(--text-white);
   border-radius: 5rem;
   padding: 0.5rem;
+  gap: min(2rem, 1vw);
 
   font-size: 1.6rem;
 
@@ -193,13 +193,13 @@
 }
 
 .subscribe__input-wrap {
-  padding-left: 6.8rem;
+  padding-left: min(6.8rem, 6vw);
 }
 
 .subscribe__input-wrap::before {
   width: 2.4rem;
   height: 2.4rem;
-  left: 2.8rem;
+  left: min(2.8rem, 2vw);
 }
 
 /* footer */
@@ -220,7 +220,7 @@
 }
 
 .footer__logo img {
-  width: 22.6rem;
+  width: min(22.6rem, 19vw);
   aspect-ratio: 226/70;
 }
 
