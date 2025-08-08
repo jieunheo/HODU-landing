@@ -18,11 +18,11 @@
         <a href="#"><img src="./images/logo.svg" alt="HODU" /></a>
       </h1>
 
-      <button class="nav__btn--open">
+      <button id="open_nav_btn" class="nav__btn--open">
         <img src="./images/menu.svg" alt="메뉴" />
       </button>
-      <nav class="header__nav">
-        <button class="nav__btn--close">
+      <nav id="header_nav" class="header__nav">
+        <button id="close_nav_btn" class="nav__btn--close">
           <img src="./images/arrow-right.svg" alt="메뉴 닫기" />
         </button>
         <ul class="nav__list">
@@ -204,6 +204,7 @@
     </div>
 
     <script>
+      // modal
       const subscribe_btn = document.querySelector("#subscribe_btn");
       const modal = document.querySelector("#modal");
       const close_modal_btn = document.querySelector("#close_modal_btn");
@@ -213,6 +214,18 @@
       });
       close_modal_btn.addEventListener("click", () => {
         modal.classList.remove("modal-show");
+      });
+
+      // nav
+      const open_nav_btn = document.querySelector("#open_nav_btn");
+      const close_nav_btn = document.querySelector("#close_nav_btn");
+      const header_nav = document.querySelector("#header_nav");
+
+      open_nav_btn.addEventListener("click", () => {
+        header_nav.classList.add("open-nav");
+      });
+      close_nav_btn.addEventListener("click", () => {
+        header_nav.classList.remove("open-nav");
       });
     </script>
   </body>
