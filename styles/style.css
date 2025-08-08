@@ -417,6 +417,10 @@ button {
   transform: translate(-50%, -50%);
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal::before {
   content: "";
   display: inline-block;

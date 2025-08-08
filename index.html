@@ -132,7 +132,9 @@
               placeholder="Enter your e-mail address"
             />
           </div>
-          <button class="subscribe__btn">Subscribe</button>
+          <button type="button" id="subscribe_btn" class="subscribe__btn">
+            Subscribe
+          </button>
         </form>
       </section>
     </main>
@@ -190,15 +192,28 @@
       </a>
     </aside>
 
-    <div class="modal__wrap">
+    <div id="modal" class="modal__wrap">
       <section class="modal">
         <h3 class="a11y-hidden">블로그 게시글 구독 성공</h3>
         <p class="modal__title">Thank you!</p>
         <p class="modal__desc">
           Lorem Ipsum is simply dummy text of the printing industry.
         </p>
-        <button class="modal__btn">OK! I Love HODU</button>
+        <button id="close_modal_btn" class="modal__btn">OK! I Love HODU</button>
       </section>
     </div>
+
+    <script>
+      const subscribe_btn = document.querySelector("#subscribe_btn");
+      const modal = document.querySelector("#modal");
+      const close_modal_btn = document.querySelector("#close_modal_btn");
+
+      subscribe_btn.addEventListener("click", () => {
+        modal.classList.add("modal-show");
+      });
+      close_modal_btn.addEventListener("click", () => {
+        modal.classList.remove("modal-show");
+      });
+    </script>
   </body>
 </html>
