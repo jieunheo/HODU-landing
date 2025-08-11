@@ -113,6 +113,7 @@ button {
   padding: 2.2rem 2rem;
   width: 70vw;
   height: 100vh;
+  visibility: hidden;
 
   position: fixed;
   top: 0;
@@ -123,6 +124,7 @@ button {
 }
 
 .open-nav {
+  visibility: visible;
   right: 0;
 }
 

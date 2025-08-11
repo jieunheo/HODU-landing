@@ -36,6 +36,7 @@
 
 .header__nav {
   position: static;
+  visibility: visible;
   transition: none;
   background-color: inherit;
   padding: 0;
