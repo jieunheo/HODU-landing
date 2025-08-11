@@ -61,11 +61,16 @@
 
       <section class="inform">
         <h2 class="a11y-hidden">호두 소개</h2>
-        <img
-          class="inform__img"
-          src="./images/intro.png"
-          alt="이불 위에 옆으로 누워서 어딘가를 바라보는 고양이 호두"
-        />
+
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./images/intro.png" />
+          <source media="(min-width: 1025px)" srcset="./images/intro@2x.png" />
+          <img
+            class="inform__img"
+            src="./images/intro.png"
+            alt="이불 위에 옆으로 누워서 어딘가를 바라보는 고양이 호두"
+          />
+        </picture>
         <div class="inform__text">
           <p class="inform__title">
             Lorem Ipsum is simply dummy text of the printing and dummy text
@@ -110,7 +115,7 @@
               />
               <img
                 class="feature__img"
-                src="./images/img1.png"
+                src="./images/img2.png"
                 alt="벽을 바라보는 뒷모습의 고양이 호두"
               />
             </picture>
@@ -124,7 +129,7 @@
               />
               <img
                 class="feature__img"
-                src="./images/img1.png"
+                src="./images/img3.png"
                 alt="얌전히 앉아서 나를 바라보는 고양이 호두"
               />
             </picture>
