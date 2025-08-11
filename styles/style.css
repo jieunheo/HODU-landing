@@ -90,7 +90,6 @@ button {
 
   position: sticky;
   top: 0;
-  width: 100vw;
   z-index: 100;
 
   display: flex;
@@ -220,6 +219,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   text-align: center;
 }
