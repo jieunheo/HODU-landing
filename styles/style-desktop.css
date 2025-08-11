@@ -130,6 +130,7 @@
 }
 
 .feature__imgs {
+  align-self: auto;
   margin-top: 8.8rem;
 
   justify-content: center;
