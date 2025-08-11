@@ -103,7 +103,8 @@ button {
 }
 
 /* header - nav */
-.nav__btn--open {
+.nav__btn--open,
+.nav__btn--close {
   width: 3.2rem;
   height: 3.2rem;
 }
@@ -126,11 +127,6 @@ button {
 .open-nav {
   visibility: visible;
   right: 0;
-}
-
-.nav__btn--close {
-  width: 3.2rem;
-  height: 3.2rem;
 }
 
 .nav__list {
@@ -397,22 +393,7 @@ button {
 
 /* aside */
 .aside {
-  position: fixed;
-  right: 2.4rem;
-  bottom: 2.4rem;
-}
-.to-top {
   display: none;
-
-  width: 4rem;
-  height: 4rem;
-  background: #fff url(../images/top-btn.svg) no-repeat center / contain;
-  border: 1px solid #c4c4c4;
-  border-radius: 50%;
-}
-
-.to-top:hover {
-  background-image: url(../images/top-btn-hover.svg);
 }
 
 /* modal */

@@ -245,8 +245,23 @@
 }
 
 /* to-top */
-.to-top {
+.aside {
   display: block;
+
+  position: fixed;
+  right: 2.4rem;
+  bottom: 2.4rem;
+}
+.to-top {
+  width: 4rem;
+  height: 4rem;
+  background: #fff url(../images/top-btn.svg) no-repeat center / contain;
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+}
+
+.to-top:hover {
+  background-image: url(../images/top-btn-hover.svg);
 }
 
 /* modal */
