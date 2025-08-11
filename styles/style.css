@@ -423,7 +423,7 @@ button {
     center / contain;
   border-radius: 3rem;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  width: max(30rem, calc(100% - 27rem));
+  width: max(30rem, calc(100% - 52rem));
 
   text-align: center;
 
@@ -440,18 +440,22 @@ button {
 .modal::before {
   content: "";
   display: inline-block;
-  width: 6rem;
-  height: 6.2rem;
+  width: max(6rem, 7vw);
+  height: max(6.2rem, 7.6vw);
   background: url(../images/cat-subscribe.png) no-repeat center top / cover;
 }
 
 .modal__title {
   margin-top: 2.4rem;
   color: var(--primary-color);
+
+  font-size: max(2.4rem, 4vw);
 }
 
 .modal__desc {
   margin-top: 1rem;
+
+  font-size: max(1.4rem, 2.1vw);
 }
 
 .modal__btn {
