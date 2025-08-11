@@ -129,9 +129,15 @@
   margin-top: 4rem;
 }
 
+.feature__wrap {
+  margin-top: 8.8rem;
+
+  width: auto;
+  overflow: visible;
+}
+
 .feature__imgs {
   align-self: auto;
-  margin-top: 8.8rem;
 
   justify-content: center;
   gap: min(7.2rem, 2vw);
@@ -142,7 +148,7 @@
 }
 
 .feature__post {
-  margin-top: 9rem;
+  margin-top: 6rem;
   width: min(93.8rem, 90vw);
 
   flex-direction: row;

@@ -212,7 +212,6 @@ button {
 /* main - feature */
 .feature {
   margin-top: 6rem;
-  padding: 0 3.2rem;
 
   display: flex;
   flex-direction: column;
@@ -220,6 +219,10 @@ button {
   overflow: hidden;
 
   text-align: center;
+}
+
+.feature > * {
+  padding: 0 3.2rem;
 }
 
 .feature__title,
@@ -235,10 +238,17 @@ button {
   font-weight: 700;
 }
 
+.feature__wrap {
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: visible;
+}
+
 .feature__imgs {
   align-self: self-start;
-
-  margin-top: 4rem;
 
   display: flex;
   gap: 2rem;
@@ -250,7 +260,7 @@ button {
 }
 
 .feature__post {
-  margin-top: 6rem;
+  margin-top: 3rem;
 
   display: flex;
   flex-direction: column;
