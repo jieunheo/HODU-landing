@@ -178,8 +178,8 @@ button {
 .intro::after {
   content: "";
   display: block;
-  width: 19.7rem;
-  height: 42.2rem;
+  width: max(19.7rem, 40vw);
+  height: max(42.2rem, 60vw);
   background: url(../images/box-cat.png) no-repeat center 6rem / contain;
   margin-top: -6rem;
 }
