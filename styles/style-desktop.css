@@ -244,6 +244,11 @@
   height: 2.4rem;
 }
 
+/* to-top */
+.to-top {
+  display: block;
+}
+
 /* modal */
 .modal {
   padding: 6rem 10.5rem 4rem;

@@ -402,6 +402,8 @@ button {
   bottom: 2.4rem;
 }
 .to-top {
+  display: none;
+
   width: 4rem;
   height: 4rem;
   background: #fff url(../images/top-btn.svg) no-repeat center / contain;
