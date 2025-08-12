@@ -198,6 +198,7 @@
   font-size: 1.6rem;
 
   flex-direction: row;
+  align-items: center;
 }
 
 .subscribe__input-wrap {
@@ -208,6 +209,10 @@
   width: 2.4rem;
   height: 2.4rem;
   left: min(2.8rem, 2vw);
+}
+
+.subscribe__input {
+  border-radius: 0;
 }
 
 /* ========== footer ========== */

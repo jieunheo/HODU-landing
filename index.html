@@ -26,12 +26,12 @@
       <button
         id="open_nav_btn"
         class="nav__btn--open"
-        aria-controls="header__nav"
+        aria-controls="header_nav"
         aria-expanded="false"
       >
         <img src="./images/menu.svg" alt="메뉴 열기" />
       </button>
-      <nav id="header_nav" class="header__nav" role="dialog" aria-modal="true">
+      <nav id="header_nav" class="header__nav">
         <button
           id="close_nav_btn"
           class="nav__btn--close"
@@ -177,13 +177,13 @@
         </div>
         <form class="subscribe__form" action="#" id="subscribeForm">
           <div class="subscribe__input-wrap">
+            <label for="email" class="a11y-hidden">구독 이메일</label>
             <input
               class="subscribe__input"
               type="email"
               name="email"
               id="email"
               placeholder="Enter your e-mail address"
-              aria-labelledby="구독할 이메일 입력"
               required
             />
           </div>
