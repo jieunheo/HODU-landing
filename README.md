@@ -88,7 +88,8 @@ HODU-landing
 │  ├─ modal-bg-img.png
 │  ├─ readme
 │  │  ├─ desktop.png
-│  │  └─ mobile.png
+│  │  ├─ mobile.png
+│  │  └─ schedule.png
 │  ├─ top-btn-hover.svg
 │  ├─ top-btn.svg
 │  └─ youtube.svg
@@ -104,6 +105,8 @@ HODU-landing
 ### 4.2 개발 일정
 
 25.08.08(금) ~ 25.08.12(화), 평일 기준 총 3일
+
+![schedule](./images/readme/schedule.png)
 
 ## 5. 화면
 
