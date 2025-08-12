@@ -106,8 +106,8 @@ HODU-landing
 
 25.08.08(금) ~ 25.08.12(화), 평일 기준 총 3일
 (래포지토리 생성 및 index.html 파일 생성은 7일에 진행)
-
 ![schedule](./images/readme/schedule.png)
+노션 간트 사용
 
 ## 5. 화면
 
