@@ -105,6 +105,7 @@ HODU-landing
 ### 4.2 개발 일정
 
 25.08.08(금) ~ 25.08.12(화), 평일 기준 총 3일
+(래포지토리 생성 및 index.html 파일 생성은 7일에 진행)
 
 ![schedule](./images/readme/schedule.png)
 
