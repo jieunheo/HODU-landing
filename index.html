@@ -23,31 +23,35 @@
         <a href="#"><img src="./images/logo.svg" alt="HODU" /></a>
       </h1>
 
-      <button
-        id="open_nav_btn"
-        class="nav__btn--open"
-        aria-controls="header_nav"
-        aria-expanded="false"
-      >
-        <img src="./images/menu.svg" alt="메뉴 열기" />
-      </button>
-      <nav id="header_nav" class="header__nav">
+      <div>
         <button
-          id="close_nav_btn"
-          class="nav__btn--close"
-          aria-label="메뉴 닫기"
+          id="open_nav_btn"
+          class="nav__btn--open"
+          aria-controls="header_nav"
+          aria-expanded="false"
         >
-          <img src="./images/arrow-right.svg" alt="메뉴 닫기" />
+          <img src="./images/menu.svg" alt="메뉴 열기" />
         </button>
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
-          <li class="nav__item">
-            <button class="nav__btn--download">Download</button>
-          </li>
-        </ul>
-      </nav>
+
+        <div id="header_nav_bg" class="header__nav-bg"></div>
+        <nav id="header_nav" class="header__nav">
+          <button
+            id="close_nav_btn"
+            class="nav__btn--close"
+            aria-label="메뉴 닫기"
+          >
+            <img src="./images/arrow-right.svg" alt="메뉴 닫기" />
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
+            <li class="nav__item">
+              <button class="nav__btn--download">Download</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="content">
@@ -305,8 +309,10 @@
       // 메뉴 열기 함수
       const openModal = (btn, modal) => {
         const is_nav_btn = btn.classList[0] === "nav__btn--open";
-        if (is_nav_btn) modal.classList.add("open-nav"); // 메뉴 보이기
-        else modal.classList.add("open-modal");
+        if (is_nav_btn) {
+          modal.classList.add("open-nav"); // 메뉴 보이기
+          header_nav_bg.classList.add("open-nav-bg"); // 배경 보이기
+        } else modal.classList.add("open-modal");
 
         btn.setAttribute("aria-expanded", "true"); // ARIA 상태 업데이트
         removeTrap = trapFocus(modal); // 포커스 트랩 활성화
@@ -319,8 +325,10 @@
       // 메뉴 닫기 함수
       const closeModal = (btn, modal) => {
         const is_nav_btn = btn.classList[0] === "nav__btn--open";
-        if (is_nav_btn) modal.classList.remove("open-nav"); // 메뉴 숨기기
-        else modal.classList.remove("open-modal");
+        if (is_nav_btn) {
+          modal.classList.remove("open-nav"); // 메뉴 숨기기
+          header_nav_bg.classList.remove("open-nav-bg"); // 배경 숨기기
+        } else modal.classList.remove("open-modal");
 
         btn.setAttribute("aria-expanded", "false");
         if (removeTrap) removeTrap(); // 포커스 트랩 이벤트 제거
@@ -331,6 +339,7 @@
       const open_nav_btn = document.querySelector("#open_nav_btn");
       const close_nav_btn = document.querySelector("#close_nav_btn");
       const header_nav = document.querySelector("#header_nav");
+      const header_nav_bg = document.querySelector("#header_nav_bg");
 
       // 버튼 클릭 이벤트 연결
       open_nav_btn.addEventListener("click", (event) => {
