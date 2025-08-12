@@ -28,6 +28,10 @@
   box-sizing: border-box;
   line-height: 100%;
 }
+*:focus {
+  outline: 1rem solid red;
+  outline-width: thick;
+}
 
 html {
   font-size: 10px;
