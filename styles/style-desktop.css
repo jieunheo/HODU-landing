@@ -202,13 +202,13 @@
 }
 
 .subscribe__input-wrap {
-  padding-left: min(6.8rem, 6vw);
+  padding-left: min(6.3rem, 6vw);
 }
 
 .subscribe__input-wrap::before {
   width: 2.4rem;
   height: 2.4rem;
-  left: min(2.8rem, 2vw);
+  left: min(2.3rem, 2vw);
 }
 
 .subscribe__input {
