@@ -443,7 +443,7 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.modal-show {
+.open-modal {
   display: block;
 }
 
