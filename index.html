@@ -175,7 +175,7 @@
             industry. Lorem Ipsum has been the industry's standard dummy text
           </p>
         </div>
-        <form class="subscribe__form" action="#">
+        <form class="subscribe__form" action="#" id="subscribeForm">
           <div class="subscribe__input-wrap">
             <input
               class="subscribe__input"
@@ -184,9 +184,10 @@
               id="email"
               placeholder="Enter your e-mail address"
               aria-labelledby="구독할 이메일 입력"
+              required
             />
           </div>
-          <button type="button" id="subscribe_btn" class="subscribe__btn">
+          <button type="submit" id="subscribe_btn" class="subscribe__btn">
             Subscribe
           </button>
         </form>
@@ -326,7 +327,7 @@
         btn.focus(); // 다시 열기 버튼에 포커스
       };
 
-      // nav
+      // nav - querySelector 사용
       const open_nav_btn = document.querySelector("#open_nav_btn");
       const close_nav_btn = document.querySelector("#close_nav_btn");
       const header_nav = document.querySelector("#header_nav");
@@ -339,16 +340,29 @@
         closeModal(open_nav_btn, header_nav);
       });
 
-      // modal
-      const subscribe_btn = document.querySelector("#subscribe_btn");
-      const modal = document.querySelector("#modal");
-      const close_modal_btn = document.querySelector("#close_modal_btn");
+      // modal - getElementById 사용
+      const subscribe_btn = document.getElementById("subscribe_btn");
+      const modal = document.getElementById("modal");
+      const close_modal_btn = document.getElementById("close_modal_btn");
+      const form = document.getElementById("subscribeForm");
+      const email = document.getElementById("email");
 
-      subscribe_btn.addEventListener("click", (event) => {
+      form.addEventListener("submit", (event) => {
+        if (!form.checkValidity()) {
+          // 기본 메시지 보여주기
+          return; // 여기서 그냥 종료 → 제출 안 함
+        }
+
+        // 기본 동작 막기 (전송 방지)
+        event.preventDefault();
+
+        // 여기서 원하는 동작만 실행
         openModal(subscribe_btn, modal);
       });
       close_modal_btn.addEventListener("click", (event) => {
         closeModal(subscribe_btn, modal);
+
+        subscribe_btn.setAttribute("disabled", "true");
       });
     </script>
   </body>
