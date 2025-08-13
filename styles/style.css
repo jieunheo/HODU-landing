@@ -367,6 +367,8 @@ button {
 
 .subscribe__btn:disabled {
   background-color: var(--text-gray);
+
+  cursor: auto;
 }
 
 /* ========== footer ========== */
