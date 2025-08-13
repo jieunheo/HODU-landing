@@ -308,12 +308,6 @@
 
       // 메뉴 열기 함수
       const openModal = (btn, modal) => {
-        const is_nav_btn = btn.classList[0] === "nav__btn--open";
-        if (is_nav_btn) {
-          modal.classList.add("open-nav"); // 메뉴 보이기
-          header_nav_bg.classList.add("open-nav-bg"); // 배경 보이기
-        } else modal.classList.add("open-modal");
-
         btn.setAttribute("aria-expanded", "true"); // ARIA 상태 업데이트
         removeTrap = trapFocus(modal); // 포커스 트랩 활성화
 
@@ -324,12 +318,6 @@
 
       // 메뉴 닫기 함수
       const closeModal = (btn, modal) => {
-        const is_nav_btn = btn.classList[0] === "nav__btn--open";
-        if (is_nav_btn) {
-          modal.classList.remove("open-nav"); // 메뉴 숨기기
-          header_nav_bg.classList.remove("open-nav-bg"); // 배경 숨기기
-        } else modal.classList.remove("open-modal");
-
         btn.setAttribute("aria-expanded", "false");
         if (removeTrap) removeTrap(); // 포커스 트랩 이벤트 제거
         btn.focus(); // 다시 열기 버튼에 포커스
@@ -343,9 +331,15 @@
 
       // 버튼 클릭 이벤트 연결
       open_nav_btn.addEventListener("click", (event) => {
+        modal.classList.add("open-nav"); // 메뉴 보이기
+        header_nav_bg.classList.add("open-nav-bg"); // 배경 보이기
+
         openModal(open_nav_btn, header_nav);
       });
       close_nav_btn.addEventListener("click", (event) => {
+        modal.classList.remove("open-nav"); // 메뉴 숨기기
+        header_nav_bg.classList.remove("open-nav-bg"); // 배경 숨기기
+
         closeModal(open_nav_btn, header_nav);
       });
 
@@ -366,9 +360,13 @@
         event.preventDefault();
 
         // 여기서 원하는 동작만 실행
+        modal.classList.add("open-modal");
+
         openModal(subscribe_btn, modal);
       });
       close_modal_btn.addEventListener("click", (event) => {
+        modal.classList.remove("open-modal");
+
         closeModal(subscribe_btn, modal);
 
         subscribe_btn.setAttribute("disabled", "true");
